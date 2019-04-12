@@ -9,15 +9,13 @@ public class Tomato {
             try{
                 String message = "西红柿："+ dayPrice + "元/500克";
                 String[] strArr = message.split(":");
-                String unitPriceStr = strArr[2].substring(0,4);
+                String unitPriceStr = strArr[0].substring(4,8);
                 double weight = 650;
                 double unitPriceDou = Double.parseDouble(unitPriceStr);
                 System.out.println(message+"，顾客买了"+ weight + "克的西红柿，须支付"+(float) (weight / 500 * unitPriceDou)+"元");
-            }catch (ArrayIndexOutOfBoundsException aiobe){
+            } catch (Exception aiobe){
                 aiobe.printStackTrace();
-            }catch (Exception e){
-                e.printStackTrace();
-            }finally{
+            } finally{
                 sc.close();
                 System.out.println("控制台输入对象被关闭。");
             }

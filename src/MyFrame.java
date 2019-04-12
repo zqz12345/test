@@ -27,6 +27,7 @@ public class MyFrame extends JFrame {
         container.add(bl);
         container.setBackground(Color.WHITE);
         setSize(200,200);
+
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setVisible(true);
     }
